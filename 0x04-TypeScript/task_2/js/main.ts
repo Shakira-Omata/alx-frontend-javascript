@@ -83,18 +83,21 @@ function isDirector(employee: Director | Teacher): employee is Director {
   return employee instanceof Director;
 }
 
-// Task 6: 
-function executeWork(employee: Director | Teacher): string {
-  if (isDirector(employee)) {
-    return employee.workDirectorTasks();
+
+// Task 7: 
+type Subjects = 'Math' | 'History';
+
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
   } else {
-    return employee.workTeacherTasks();
+    return 'Teaching History';
   }
 }
 
-// Test executeWork function
-console.log(executeWork(createEmployee(200)));
-// Expected: Getting to work
+// Test the teachClass function
+console.log(teachClass('Math'));
+// Expected: Teaching Math
 
-console.log(executeWork(createEmployee(1000)));
-// Expected: Getting to director tasks
+console.log(teachClass('History'));
+// Expected: Teaching History
