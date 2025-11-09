@@ -20,7 +20,6 @@ const teacher3: Teacher = {
   lastName: 'Doe',
   location: 'London',
   contract: false,
-
 };
 
 console.log(teacher3);
@@ -31,22 +30,17 @@ const director1: Director = {
   lastName: 'Doe',
   location: 'London',
   fullTimeEmployee: true,
-  yearsOfExperience: 15,
   numberOfReports: 17,
 };
 
 console.log(director1);
+
+// Task 3: printTeacher function
 
 // Interface for the printTeacher function
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Implementation of printTeacher
-function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName[0]}. ${lastName}`;
-}
-
-// Test the function
-console.log(printTeacher("John", "Doe")); 
-console.log(printTeacher("Jane", "Smith"));
+// Implementation of printTeacher with destructured parameters
+function printTeacher({ firstName, lastName }: { firstName: string; lastName: string }
