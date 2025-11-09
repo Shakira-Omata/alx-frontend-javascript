@@ -78,3 +78,23 @@ if (employee2 instanceof Director) {
   console.log(employee2.getCoffeeBreak()); // Getting a coffee break
   console.log(employee2.workDirectorTasks()); // Getting to director tasks
 }
+
+function isDirector(employee: Director | Teacher): employee is Director {
+  return employee instanceof Director;
+}
+
+// Task 6: 
+function executeWork(employee: Director | Teacher): string {
+  if (isDirector(employee)) {
+    return employee.workDirectorTasks();
+  } else {
+    return employee.workTeacherTasks();
+  }
+}
+
+// Test executeWork function
+console.log(executeWork(createEmployee(200)));
+// Expected: Getting to work
+
+console.log(executeWork(createEmployee(1000)));
+// Expected: Getting to director tasks
