@@ -43,10 +43,10 @@ interface printTeacherFunction {
 }
 
 // Implementation of printTeacher
-function printTeacher(firstName: string, lastName: string): string {
+function printTeacher({ firstName, lastName }: { firstName: string; lastName: string }): string {
   return `${firstName[0]}. ${lastName}`;
 }
 
 // Test the function
-console.log(printTeacher("John", "Doe")); 
-console.log(printTeacher("Jane", "Smith"));
+console.log(printTeacher({ firstName: "John", lastName: "Doe" })); 
+console.log(printTeacher({ firstName: "Jane", lastName: "Smith" }));
