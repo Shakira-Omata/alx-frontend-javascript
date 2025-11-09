@@ -1,14 +1,14 @@
 // Define the Teacher interface
 interface Teacher {
-  readonly firstName: string;  // readonly means it can only be set during initialization
-  readonly lastName: string;   // readonly means it can only be set during initialization
-  fullTimeEmployee: boolean;   // always defined
-  yearsOfExperience?: number;  // optional (note the ?)
-  location: string;            // always defined
-  [propName: string]: any;     // allows any additional properties
+  readonly firstName: string;  
+  readonly lastName: string;   
+  fullTimeEmployee: boolean;   
+  yearsOfExperience?: number;  
+  location: string;            
+  [propName: string]: any;     
 }
 
-// Example 1: Teacher with all required properties
+
 const teacher1: Teacher = {
   firstName: 'John',
   lastName: 'Doe',
@@ -18,7 +18,7 @@ const teacher1: Teacher = {
 
 console.log('Teacher 1:', teacher1);
 
-// Example 2: Teacher with optional yearsOfExperience
+
 const teacher2: Teacher = {
   firstName: 'Jane',
   lastName: 'Smith',
@@ -29,7 +29,7 @@ const teacher2: Teacher = {
 
 console.log('Teacher 2:', teacher2);
 
-// Example 3: Teacher with additional property (contract)
+
 const teacher3: Teacher = {
   firstName: 'John',
   fullTimeEmployee: false,
@@ -40,7 +40,7 @@ const teacher3: Teacher = {
 
 console.log('Teacher 3:', teacher3);
 
-// Example 4: Teacher with multiple additional properties
+
 const teacher4: Teacher = {
   firstName: 'Alice',
   lastName: 'Johnson',
