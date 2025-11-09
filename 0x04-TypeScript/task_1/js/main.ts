@@ -48,4 +48,5 @@ function printTeacher(firstName: string, lastName: string): string {
 }
 
 // Test the function
-console.log(printTeacher("John", "Doe"));
+console.log(printTeacher("John", "Doe")); 
+console.log(printTeacher("Jane", "Smith"));
